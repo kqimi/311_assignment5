@@ -17,9 +17,24 @@ public class Main {
         sea.addRoute("Tahiti", "Hawaii", 7.0);
         sea.addRoute("Hawaii", "Niihau", 9.5);
 
+        Island rapanui = new Island("Rapanui", 500);
+        Island samoa = new Island("Samoa", 600);
+
+        sea.addIsland(rapanui);
+        sea.addIsland(samoa);
+
+        sea.addRoute("Tahiti", "Rapanui", 4.0);
+        sea.addRoute("Samoa", "Rapanui", 3.5);
+        sea.addRoute("Hawaii", "Samoa", 6.0);
+
         System.out.println("Sea of Islands:");
         for (Island island : sea.getAllIslands()) {
             System.out.println("- " + island);
         }
+        
+        ResourcePlanter planter = new ResourcePlanter(sea, "SweetPotato", 2);
+        planter.distributeFrom("Hawaii");
+
+
     }
 }
