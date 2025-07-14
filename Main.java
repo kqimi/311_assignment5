@@ -35,6 +35,8 @@ public class Main {
         ResourcePlanter planter = new ResourcePlanter(sea, "SweetPotato", 2);
         planter.distributeFrom("Hawaii");
 
-
+        // Test ShellDistribution from Ni'ihau
+        ShellDistribution distribute = new ShellDistribution(sea);
+        distribute.distributeShellLeis("Niihau", 100);
     }
 }
